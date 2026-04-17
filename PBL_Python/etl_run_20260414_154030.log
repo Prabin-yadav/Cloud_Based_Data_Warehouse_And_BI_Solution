@@ -1,0 +1,230 @@
+2026-04-14 15:40:30,326 [INFO] ============================================================
+2026-04-14 15:40:30,327 [INFO] ZENTRIK PHARMA ETL PIPELINE
+2026-04-14 15:40:30,327 [INFO] Started: 2026-04-14 15:40:30
+2026-04-14 15:40:30,351 [INFO] ============================================================
+2026-04-14 15:40:30,353 [INFO] 
+[STEP 1] EXTRACT
+2026-04-14 15:40:31,177 [INFO] NumExpr defaulting to 12 threads.
+2026-04-14 15:40:31,533 [INFO] ============================================================
+2026-04-14 15:40:31,534 [INFO] EXTRACT PHASE — AdventureWorks DW
+2026-04-14 15:40:31,541 [INFO] ============================================================
+2026-04-14 15:40:31,778 [INFO]   dim_geography: 655 rows extracted
+2026-04-14 15:40:31,785 [INFO]   dim_sales_territory: 11 rows extracted
+2026-04-14 15:40:31,790 [INFO]   dim_product_category: 4 rows extracted
+2026-04-14 15:40:31,797 [INFO]   dim_product_subcategory: 37 rows extracted
+2026-04-14 15:40:31,831 [INFO]   dim_product: 395 rows extracted
+2026-04-14 15:40:31,965 [INFO]   dim_customer: 18,484 rows extracted
+2026-04-14 15:40:33,258 [INFO]   fact_internet_sales: 60,398 rows extracted
+2026-04-14 15:40:37,385 [INFO]   fact_product_inventory: 776,286 rows extracted
+2026-04-14 15:40:50,494 [INFO] 
+EXTRACT SUMMARY:
+2026-04-14 15:40:50,494 [INFO]   dim_date: 3,652 rows
+2026-04-14 15:40:50,494 [INFO]   dim_geography: 655 rows
+2026-04-14 15:40:50,495 [INFO]   dim_sales_territory: 11 rows
+2026-04-14 15:40:50,495 [INFO]   dim_product_category: 4 rows
+2026-04-14 15:40:50,495 [INFO]   dim_product_subcategory: 37 rows
+2026-04-14 15:40:50,495 [INFO]   dim_product: 395 rows
+2026-04-14 15:40:50,495 [INFO]   dim_customer: 18,484 rows
+2026-04-14 15:40:50,495 [INFO]   fact_internet_sales: 60,398 rows
+2026-04-14 15:40:50,495 [INFO]   fact_product_inventory: 776,286 rows
+2026-04-14 15:40:50,495 [INFO]   TOTAL: 859,922 rows
+2026-04-14 15:40:50,496 [INFO] Extract completed in 19.0s
+2026-04-14 15:40:50,496 [INFO] 
+[STEP 2] TRANSFORM
+2026-04-14 15:40:50,497 [INFO] ============================================================
+2026-04-14 15:40:50,497 [INFO] TRANSFORM PHASE -- Full data cleaning on all tables
+2026-04-14 15:40:50,497 [INFO] ============================================================
+2026-04-14 15:40:50,498 [INFO] Transforming dim_date...
+2026-04-14 15:40:50,522 [INFO]   dim_date: 3,652 rows  (removed 0 total)
+2026-04-14 15:40:50,522 [INFO] Transforming dim_geography...
+2026-04-14 15:40:50,530 [INFO]   dim_geography: 655 rows  (removed 0 total)
+2026-04-14 15:40:50,531 [INFO] Transforming dim_sales_territory...
+2026-04-14 15:40:50,536 [INFO]   dim_sales_territory: 11 rows  (removed 0 total)
+2026-04-14 15:40:50,536 [INFO] Transforming dim_therapeutic_class...
+2026-04-14 15:40:50,551 [INFO]   dim_therapeutic_class: 37 rows  (removed 0 total)
+2026-04-14 15:40:50,553 [INFO] Transforming dim_drug...
+2026-04-14 15:40:50,598 [INFO]   dim_drug: 395 rows  (from 395, removed 0)
+2026-04-14 15:40:50,599 [INFO] Transforming dim_customer...
+2026-04-14 15:40:51,847 [INFO]   dim_customer: 18,484 rows  (from 18,484, removed 0)
+2026-04-14 15:40:51,852 [INFO] Transforming fact_drug_sales...
+2026-04-14 15:40:58,044 [INFO]   fact_drug_sales: 60,398 rows  (from 60,398, removed 0)
+2026-04-14 15:40:58,072 [INFO] Transforming fact_inventory...
+2026-04-14 15:41:31,184 [WARNING]   [fact_inventory] Removed 270,291 rows -- drug_not_found
+2026-04-14 15:41:31,184 [WARNING]   [fact_inventory] Removed 30,415 rows -- future_date
+2026-04-14 15:41:31,185 [WARNING]   [fact_inventory] Fixed 3,319 rows -- negative_units_fixed
+2026-04-14 15:41:31,185 [INFO]   fact_inventory: 475,580 rows  (from 776,286, removed 300,706)
+2026-04-14 15:41:31,324 [INFO] 
+TRANSFORM SUMMARY:
+2026-04-14 15:41:31,324 [INFO] ---------------------------------------------
+2026-04-14 15:41:31,325 [INFO]   dim_date                      :    3,652 rows
+2026-04-14 15:41:31,325 [INFO]   dim_geography                 :      655 rows
+2026-04-14 15:41:31,325 [INFO]   dim_sales_territory           :       11 rows
+2026-04-14 15:41:31,325 [INFO]   dim_therapeutic_class         :       37 rows
+2026-04-14 15:41:31,326 [INFO]   dim_drug                      :      395 rows
+2026-04-14 15:41:31,326 [INFO]   dim_customer                  :   18,484 rows
+2026-04-14 15:41:31,326 [INFO]   fact_drug_sales               :   60,398 rows
+2026-04-14 15:41:31,326 [INFO]   fact_inventory                :  475,580 rows
+2026-04-14 15:41:31,327 [INFO]   TOTAL                         :  559,212 rows
+2026-04-14 15:41:31,327 [INFO] ============================================================
+2026-04-14 15:41:31,327 [INFO] Transform completed in 40.8s
+2026-04-14 15:41:31,327 [INFO] 
+[STEP 3] LOAD
+2026-04-14 15:41:31,355 [INFO] ============================================================
+2026-04-14 15:41:31,355 [INFO] LOAD PHASE — AWS RDS PostgreSQL
+2026-04-14 15:41:31,356 [INFO] ============================================================
+2026-04-14 15:41:31,527 [INFO] Loading dim_date...
+2026-04-14 15:41:31,877 [INFO]     dim_date: 3,652/3,652 rows
+2026-04-14 15:41:31,909 [INFO]   dim_date: 3,652 inserted
+2026-04-14 15:41:31,910 [INFO] Loading dim_geography...
+2026-04-14 15:41:31,964 [INFO]     dim_geography: 655/655 rows
+2026-04-14 15:41:31,998 [INFO]   dim_geography: 655 rows
+2026-04-14 15:41:31,999 [INFO] Loading dim_sales_territory...
+2026-04-14 15:41:32,032 [INFO]     dim_sales_territory: 11/11 rows
+2026-04-14 15:41:32,058 [INFO]   dim_sales_territory: 11 rows
+2026-04-14 15:41:32,059 [INFO] Loading dim_therapeutic_class...
+2026-04-14 15:41:32,089 [INFO]     dim_therapeutic_class: 37/37 rows
+2026-04-14 15:41:32,116 [INFO]   dim_therapeutic_class: 37 rows
+2026-04-14 15:41:32,117 [INFO] Loading dim_drug...
+2026-04-14 15:41:32,204 [INFO]     dim_drug: 395/395 rows
+2026-04-14 15:41:32,239 [INFO]   dim_drug: 395 rows
+2026-04-14 15:41:32,240 [INFO] Loading dim_customer...
+2026-04-14 15:41:32,880 [INFO]     dim_customer: 5,000/18,484 rows
+2026-04-14 15:41:33,356 [INFO]     dim_customer: 10,000/18,484 rows
+2026-04-14 15:41:33,809 [INFO]     dim_customer: 15,000/18,484 rows
+2026-04-14 15:41:34,100 [INFO]     dim_customer: 18,484/18,484 rows
+2026-04-14 15:41:34,143 [INFO]   dim_customer: 18,484 rows
+2026-04-14 15:41:34,146 [INFO] Loading fact_drug_sales...
+2026-04-14 15:41:35,359 [INFO]     fact_drug_sales: 5,000/60,398 rows
+2026-04-14 15:41:36,458 [INFO]     fact_drug_sales: 10,000/60,398 rows
+2026-04-14 15:41:37,323 [INFO]     fact_drug_sales: 15,000/60,398 rows
+2026-04-14 15:41:38,199 [INFO]     fact_drug_sales: 20,000/60,398 rows
+2026-04-14 15:41:39,032 [INFO]     fact_drug_sales: 25,000/60,398 rows
+2026-04-14 15:41:39,942 [INFO]     fact_drug_sales: 30,000/60,398 rows
+2026-04-14 15:41:40,732 [INFO]     fact_drug_sales: 35,000/60,398 rows
+2026-04-14 15:41:41,585 [INFO]     fact_drug_sales: 40,000/60,398 rows
+2026-04-14 15:41:42,567 [INFO]     fact_drug_sales: 45,000/60,398 rows
+2026-04-14 15:41:43,365 [INFO]     fact_drug_sales: 50,000/60,398 rows
+2026-04-14 15:41:44,157 [INFO]     fact_drug_sales: 55,000/60,398 rows
+2026-04-14 15:41:44,937 [INFO]     fact_drug_sales: 60,000/60,398 rows
+2026-04-14 15:41:45,017 [INFO]     fact_drug_sales: 60,398/60,398 rows
+2026-04-14 15:41:45,052 [INFO]   fact_drug_sales: 60,398 inserted, 0 skipped
+2026-04-14 15:41:45,077 [INFO] Loading fact_inventory...
+2026-04-14 15:41:46,251 [INFO]     fact_inventory: 5,000/475,580 rows
+2026-04-14 15:41:46,586 [INFO]     fact_inventory: 10,000/475,580 rows
+2026-04-14 15:41:46,919 [INFO]     fact_inventory: 15,000/475,580 rows
+2026-04-14 15:41:47,235 [INFO]     fact_inventory: 20,000/475,580 rows
+2026-04-14 15:41:47,575 [INFO]     fact_inventory: 25,000/475,580 rows
+2026-04-14 15:41:47,966 [INFO]     fact_inventory: 30,000/475,580 rows
+2026-04-14 15:41:48,313 [INFO]     fact_inventory: 35,000/475,580 rows
+2026-04-14 15:41:48,642 [INFO]     fact_inventory: 40,000/475,580 rows
+2026-04-14 15:41:48,968 [INFO]     fact_inventory: 45,000/475,580 rows
+2026-04-14 15:41:49,295 [INFO]     fact_inventory: 50,000/475,580 rows
+2026-04-14 15:41:49,636 [INFO]     fact_inventory: 55,000/475,580 rows
+2026-04-14 15:41:50,066 [INFO]     fact_inventory: 60,000/475,580 rows
+2026-04-14 15:41:50,393 [INFO]     fact_inventory: 65,000/475,580 rows
+2026-04-14 15:41:50,762 [INFO]     fact_inventory: 70,000/475,580 rows
+2026-04-14 15:41:51,152 [INFO]     fact_inventory: 75,000/475,580 rows
+2026-04-14 15:41:51,573 [INFO]     fact_inventory: 80,000/475,580 rows
+2026-04-14 15:41:51,986 [INFO]     fact_inventory: 85,000/475,580 rows
+2026-04-14 15:41:52,427 [INFO]     fact_inventory: 90,000/475,580 rows
+2026-04-14 15:41:52,807 [INFO]     fact_inventory: 95,000/475,580 rows
+2026-04-14 15:41:53,224 [INFO]     fact_inventory: 100,000/475,580 rows
+2026-04-14 15:41:53,653 [INFO]     fact_inventory: 105,000/475,580 rows
+2026-04-14 15:41:54,007 [INFO]     fact_inventory: 110,000/475,580 rows
+2026-04-14 15:41:54,406 [INFO]     fact_inventory: 115,000/475,580 rows
+2026-04-14 15:41:54,804 [INFO]     fact_inventory: 120,000/475,580 rows
+2026-04-14 15:41:55,258 [INFO]     fact_inventory: 125,000/475,580 rows
+2026-04-14 15:41:55,620 [INFO]     fact_inventory: 130,000/475,580 rows
+2026-04-14 15:41:55,964 [INFO]     fact_inventory: 135,000/475,580 rows
+2026-04-14 15:41:56,323 [INFO]     fact_inventory: 140,000/475,580 rows
+2026-04-14 15:41:56,706 [INFO]     fact_inventory: 145,000/475,580 rows
+2026-04-14 15:41:57,052 [INFO]     fact_inventory: 150,000/475,580 rows
+2026-04-14 15:41:57,432 [INFO]     fact_inventory: 155,000/475,580 rows
+2026-04-14 15:41:57,784 [INFO]     fact_inventory: 160,000/475,580 rows
+2026-04-14 15:41:58,207 [INFO]     fact_inventory: 165,000/475,580 rows
+2026-04-14 15:41:58,570 [INFO]     fact_inventory: 170,000/475,580 rows
+2026-04-14 15:41:58,982 [INFO]     fact_inventory: 175,000/475,580 rows
+2026-04-14 15:41:59,332 [INFO]     fact_inventory: 180,000/475,580 rows
+2026-04-14 15:41:59,697 [INFO]     fact_inventory: 185,000/475,580 rows
+2026-04-14 15:42:00,055 [INFO]     fact_inventory: 190,000/475,580 rows
+2026-04-14 15:42:00,618 [INFO]     fact_inventory: 195,000/475,580 rows
+2026-04-14 15:42:01,000 [INFO]     fact_inventory: 200,000/475,580 rows
+2026-04-14 15:42:01,390 [INFO]     fact_inventory: 205,000/475,580 rows
+2026-04-14 15:42:01,730 [INFO]     fact_inventory: 210,000/475,580 rows
+2026-04-14 15:42:02,077 [INFO]     fact_inventory: 215,000/475,580 rows
+2026-04-14 15:42:02,439 [INFO]     fact_inventory: 220,000/475,580 rows
+2026-04-14 15:42:02,799 [INFO]     fact_inventory: 225,000/475,580 rows
+2026-04-14 15:42:03,159 [INFO]     fact_inventory: 230,000/475,580 rows
+2026-04-14 15:42:03,550 [INFO]     fact_inventory: 235,000/475,580 rows
+2026-04-14 15:42:03,911 [INFO]     fact_inventory: 240,000/475,580 rows
+2026-04-14 15:42:04,281 [INFO]     fact_inventory: 245,000/475,580 rows
+2026-04-14 15:42:04,632 [INFO]     fact_inventory: 250,000/475,580 rows
+2026-04-14 15:42:04,970 [INFO]     fact_inventory: 255,000/475,580 rows
+2026-04-14 15:42:05,306 [INFO]     fact_inventory: 260,000/475,580 rows
+2026-04-14 15:42:05,639 [INFO]     fact_inventory: 265,000/475,580 rows
+2026-04-14 15:42:06,031 [INFO]     fact_inventory: 270,000/475,580 rows
+2026-04-14 15:42:06,380 [INFO]     fact_inventory: 275,000/475,580 rows
+2026-04-14 15:42:06,706 [INFO]     fact_inventory: 280,000/475,580 rows
+2026-04-14 15:42:07,078 [INFO]     fact_inventory: 285,000/475,580 rows
+2026-04-14 15:42:07,393 [INFO]     fact_inventory: 290,000/475,580 rows
+2026-04-14 15:42:07,732 [INFO]     fact_inventory: 295,000/475,580 rows
+2026-04-14 15:42:08,113 [INFO]     fact_inventory: 300,000/475,580 rows
+2026-04-14 15:42:08,474 [INFO]     fact_inventory: 305,000/475,580 rows
+2026-04-14 15:42:08,810 [INFO]     fact_inventory: 310,000/475,580 rows
+2026-04-14 15:42:09,166 [INFO]     fact_inventory: 315,000/475,580 rows
+2026-04-14 15:42:09,538 [INFO]     fact_inventory: 320,000/475,580 rows
+2026-04-14 15:42:09,895 [INFO]     fact_inventory: 325,000/475,580 rows
+2026-04-14 15:42:10,319 [INFO]     fact_inventory: 330,000/475,580 rows
+2026-04-14 15:42:10,669 [INFO]     fact_inventory: 335,000/475,580 rows
+2026-04-14 15:42:11,049 [INFO]     fact_inventory: 340,000/475,580 rows
+2026-04-14 15:42:11,452 [INFO]     fact_inventory: 345,000/475,580 rows
+2026-04-14 15:42:11,870 [INFO]     fact_inventory: 350,000/475,580 rows
+2026-04-14 15:42:12,222 [INFO]     fact_inventory: 355,000/475,580 rows
+2026-04-14 15:42:12,597 [INFO]     fact_inventory: 360,000/475,580 rows
+2026-04-14 15:42:12,949 [INFO]     fact_inventory: 365,000/475,580 rows
+2026-04-14 15:42:13,350 [INFO]     fact_inventory: 370,000/475,580 rows
+2026-04-14 15:42:13,704 [INFO]     fact_inventory: 375,000/475,580 rows
+2026-04-14 15:42:14,089 [INFO]     fact_inventory: 380,000/475,580 rows
+2026-04-14 15:42:14,487 [INFO]     fact_inventory: 385,000/475,580 rows
+2026-04-14 15:42:14,894 [INFO]     fact_inventory: 390,000/475,580 rows
+2026-04-14 15:42:15,295 [INFO]     fact_inventory: 395,000/475,580 rows
+2026-04-14 15:42:15,681 [INFO]     fact_inventory: 400,000/475,580 rows
+2026-04-14 15:42:16,115 [INFO]     fact_inventory: 405,000/475,580 rows
+2026-04-14 15:42:16,518 [INFO]     fact_inventory: 410,000/475,580 rows
+2026-04-14 15:42:16,895 [INFO]     fact_inventory: 415,000/475,580 rows
+2026-04-14 15:42:17,287 [INFO]     fact_inventory: 420,000/475,580 rows
+2026-04-14 15:42:17,696 [INFO]     fact_inventory: 425,000/475,580 rows
+2026-04-14 15:42:18,080 [INFO]     fact_inventory: 430,000/475,580 rows
+2026-04-14 15:42:18,587 [INFO]     fact_inventory: 435,000/475,580 rows
+2026-04-14 15:42:18,977 [INFO]     fact_inventory: 440,000/475,580 rows
+2026-04-14 15:42:19,343 [INFO]     fact_inventory: 445,000/475,580 rows
+2026-04-14 15:42:19,690 [INFO]     fact_inventory: 450,000/475,580 rows
+2026-04-14 15:42:20,050 [INFO]     fact_inventory: 455,000/475,580 rows
+2026-04-14 15:42:20,396 [INFO]     fact_inventory: 460,000/475,580 rows
+2026-04-14 15:42:20,778 [INFO]     fact_inventory: 465,000/475,580 rows
+2026-04-14 15:42:21,147 [INFO]     fact_inventory: 470,000/475,580 rows
+2026-04-14 15:42:21,489 [INFO]     fact_inventory: 475,000/475,580 rows
+2026-04-14 15:42:21,544 [INFO]     fact_inventory: 475,580/475,580 rows
+2026-04-14 15:42:21,581 [INFO]   fact_inventory: 475,580 inserted, 0 skipped
+2026-04-14 15:42:21,627 [INFO] 
+LOAD SUMMARY:
+2026-04-14 15:42:21,627 [INFO]   dim_date: 3,652 rows loaded
+2026-04-14 15:42:21,628 [INFO]   dim_geography: 655 rows loaded
+2026-04-14 15:42:21,628 [INFO]   dim_sales_territory: 11 rows loaded
+2026-04-14 15:42:21,628 [INFO]   dim_therapeutic_class: 37 rows loaded
+2026-04-14 15:42:21,629 [INFO]   dim_drug: 395 rows loaded
+2026-04-14 15:42:21,629 [INFO]   dim_customer: 18,484 rows loaded
+2026-04-14 15:42:21,630 [INFO]   fact_drug_sales: 60,398 rows loaded
+2026-04-14 15:42:21,630 [INFO]   fact_inventory: 475,580 rows loaded
+2026-04-14 15:42:21,630 [INFO]   TOTAL LOADED: 559,212 rows
+2026-04-14 15:42:21,630 [INFO] Load completed in 50.3s
+2026-04-14 15:42:21,631 [INFO] 
+[STEP 4] VALIDATE
+2026-04-14 15:42:21,803 [INFO] 
+============================================================
+2026-04-14 15:42:21,804 [INFO] POST-LOAD VALIDATION
+2026-04-14 15:42:21,804 [INFO] ============================================================
+2026-04-14 15:42:22,355 [INFO] 
+============================================================
+2026-04-14 15:42:22,356 [INFO] ETL PIPELINE COMPLETE in 112.0s
+2026-04-14 15:42:22,356 [INFO] ============================================================

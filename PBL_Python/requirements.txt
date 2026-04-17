@@ -1,0 +1,9 @@
+# Zentrik Pharma ETL Pipeline — Python Dependencies
+# Install: pip install -r requirements.txt
+
+pyodbc==4.0.39          # SQL Server connectivity (AdventureWorks source)
+psycopg2-binary==2.9.9  # PostgreSQL connectivity (AWS RDS target)
+pandas==2.1.4           # Data transformation
+numpy==1.26.2           # Numerical operations
+sqlalchemy==2.0.23      # Optional: higher-level DB abstraction
+python-dotenv==1.0.0    # Optional: load credentials from .env file

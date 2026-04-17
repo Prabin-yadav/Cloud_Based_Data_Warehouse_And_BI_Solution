@@ -1,0 +1,5 @@
+drug_name,customer_name,customer_type,order_date,units_sold,unit_price,unit_price_discount_pct,total_product_cost,sales_amount,tax_amt,freight,sales_territory_name,country_region,city
+Ramipril 250mg Injection,City General Hospital,Hospital,2026-03-22,10,3578.27,0,2171.29,35782.7,286.26,89.46,Northwest,United States,Seattle
+Metoprolol 250mg Injection,Apollo Multispeciality Clinic,Clinic,2026-03-22,5,2800.0,5,1680.0,13300.0,106.4,33.25,Northeast,United States,Boston
+Losartan 250mg Tablet,MedPlus Pharmacy Chennai,Pharmacy,2026-03-22,20,1499.0,0,899.4,29980.0,239.84,74.95,Southwest,Australia,Sydney
+Amlodipine 250mg Cream,Fortis Wholesale Mumbai,Wholesale Distributor,2026-03-22,50,1552.45,2,930.0,76173.0,609.38,190.43,Northwest,United States,New York

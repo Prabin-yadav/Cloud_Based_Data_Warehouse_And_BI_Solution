@@ -1,0 +1,21 @@
+drug_name,customer_name,customer_type,order_date,units_sold,unit_price,unit_price_discount_pct,total_product_cost,sales_amount,tax_amt,freight,sales_territory_name,country_region,city
+Ramipril 250mg Injection,City General Hospital,Hospital,2026-03-22,10,3578.27,0,2171.29,35782.70,286.26,89.46,Northwest,United States,Seattle
+Metoprolol 250mg Injection,Apollo Multispeciality Clinic,Clinic,2026-03-22,5,2800.00,5,1680.00,13300.00,106.40,33.25,Northeast,United States,Boston
+Losartan 250mg Tablet,MedPlus Pharmacy Chennai,Pharmacy,2026-03-22,20,1499.00,0,899.40,29980.00,239.84,74.95,Southwest,Australia,Sydney
+Amlodipine 250mg Cream,Fortis Medical Wholesale,Wholesale Distributor,2026-03-22,50,1552.45,2,930.00,76120.10,609.38,190.43,Northwest,United States,New York
+Atenolol 250mg Tablet,St. Mary General Hospital,Hospital,2026-03-23,8,2200.00,0,1320.00,17600.00,140.80,44.00,Northeast,United States,Chicago
+Lisinopril 250mg Capsule,Green Valley Clinic,Clinic,2026-03-23,12,1890.00,3,1134.00,21992.40,175.94,55.00,Southwest,Australia,Melbourne
+Amoxicillin 500mg Capsule,National Retail Chain,Retail Chain,2026-03-23,30,950.00,0,570.00,28500.00,228.00,71.25,Northwest,United States,Los Angeles
+Ciprofloxacin 250mg Tablet,Sunrise Pharmacy,Pharmacy,2026-03-24,15,1350.00,5,810.00,19237.50,154.00,48.13,Northeast,United States,Houston
+Bisoprolol 500mg Tablet,Central Medical Wholesale,Wholesale Distributor,2026-03-24,25,1750.00,0,1050.00,43750.00,350.00,109.38,Northwest,United States,Phoenix
+Ibuprofen 250mg Tablet,Apollo Multispeciality Clinic,Clinic,2026-03-24,40,780.00,10,468.00,28080.00,224.64,70.20,Southwest,Australia,Brisbane
+Ramipril 250mg Injection,,Hospital,2026-03-22,5,3578.27,0,2171.29,17891.35,143.13,44.73,Northwest,United States,Seattle
+Metoprolol 250mg Injection,City General Hospital,Hospital,2026-03-22,-3,2800.00,0,1680.00,0,0,0,Northeast,United States,Boston
+Losartan 250mg Tablet,Green Valley Clinic,Clinic,not-a-date,10,1499.00,0,899.40,14990.00,119.92,37.48,Southwest,Australia,Sydney
+Amlodipine 250mg Cream,Sunrise Pharmacy,Pharmacy,2026-03-23,0,1552.45,0,930.00,0,0,0,Northwest,United States,Denver
+UnknownDrug XYZ,St. Mary General Hospital,Hospital,2026-03-23,5,999.00,0,599.40,4995.00,39.96,12.49,Northeast,United States,Chicago
+Atenolol 250mg Tablet,National Retail Chain,Retail Chain,2026-03-24,10,-500.00,0,300.00,0,0,0,Southwest,Australia,Perth
+Lisinopril 250mg Capsule,Central Medical Wholesale,Wholesale Distributor,2026-03-24,8,1890.00,150,1134.00,0,0,0,Northwest,United States,Seattle
+Amoxicillin 500mg Capsule,Apollo Multispeciality Clinic,Clinic,2026-03-24,25,950.00,0,-5000.00,23750.00,190.00,59.38,Southwest,Australia,Melbourne
+Ciprofloxacin 250mg Tablet,City General Hospital,Hospital,2099-12-31,10,1350.00,5,810.00,12825.00,102.60,32.06,Northeast,United States,Boston
+Bisoprolol 500mg Tablet,Green Valley Clinic,Clinic,2026-03-24,20,1750.00,0,1050.00,35000.00,280.00,87.50,Northwest,United States,Las Vegas
