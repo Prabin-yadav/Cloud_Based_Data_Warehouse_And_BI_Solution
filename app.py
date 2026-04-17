@@ -75,7 +75,7 @@ html, body, [data-testid="stAppViewContainer"] {
 [data-testid="stSidebar"] * { color:var(--text) !important; }
 [data-testid="stHeader"] { background:transparent !important; }
 /* Keep Streamlit toolbar visible so the sidebar can be expanded/collapsed. */
-#MainMenu { vicasibility:hidden !important; }
+#MainMenu { visibility:hidden !important; }
 footer { visibility:hidden !important; }
 
 /* Sidebar navigation */
@@ -326,6 +326,7 @@ with st.sidebar:
       "🏠 Dashboard",
       "📊 Analytics",
       "🔍 Search & Filter",
+      "🤖 AI Assistant",
       "📤 Upload & ETL",
       "📥 Reports",
       "⚙️ ETL Monitor",
@@ -362,6 +363,7 @@ st.markdown(f"""
 if   "Dashboard"  in page: from pages import dashboard; dashboard.show()
 elif "Analytics"  in page: from pages import analytics; analytics.show()
 elif "Search"     in page: from pages import search;    search.show()
+elif "AI"         in page: from pages import ai_assistant; ai_assistant.show()
 elif "Upload"     in page: from pages import upload;    upload.show()
 elif "Reports"    in page: from pages import reports;   reports.show()
 elif "Monitor"    in page: from pages import monitor;   monitor.show()

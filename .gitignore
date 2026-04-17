@@ -10,3 +10,11 @@ venv/
 # Local secrets
 .env
 .streamlit/secrets.toml
+
+# Local uploads / datasets (keep local, don't commit)
+uploads/
+
+# Common exported data artifacts
+*.csv
+*.xlsx
+*.xls
