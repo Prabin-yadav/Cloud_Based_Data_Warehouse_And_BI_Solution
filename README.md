@@ -1,4 +1,4 @@
-# Zentrik Pharma Intelligence (Streamlit App + Data Warehouse ETL)
+Zentrik Pharma Intelligence (Streamlit App + Data Warehouse ETL)
 
 This repository contains **two related but separate pieces**:
 
